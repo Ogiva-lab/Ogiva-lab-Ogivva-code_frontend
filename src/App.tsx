@@ -9,12 +9,13 @@ import ForgotPassword from "./pages/Auth/ForgotPassword.tsx";
 import VerifyCode from "./pages/Auth/VerifyCode.tsx";
 import ResetPassword from "./pages/Auth/ResetPassword.tsx";
 import PasswordResetSuccess from "./pages/Auth/PasswordResetSuccess.tsx";
+import LandingPage from "./pages/Landing/LandingPage.tsx";
 
 function App() {
   return (
     <div className="">
       <Routes>
-        <Route path="/" element={<div>Landing Page</div>} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/onboarding" element={<Onboarding />} />
         <Route path="/signup/vendor" element={<div>Vendor Registration Page</div>} />
         <Route path="/signup" element={<SignUp />} />

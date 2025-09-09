@@ -27,16 +27,6 @@ export default function ResetPassword() {
     }
 
     try {
-      const { pendingEmail } = useAuthStore.getState();
-      const email = pendingEmail;
-      const verifiedCode = sessionStorage.getItem("resetOtp");
-
-      console.log("Reset Password Debug Payload:", {
-        email,
-        code: verifiedCode,
-        newPassword: password,
-      });
-
       const message = await resetPassword(password);
       toast.success(message);
       navigate("/reset-password-successful");
